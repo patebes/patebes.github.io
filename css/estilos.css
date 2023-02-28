@@ -1,0 +1,160 @@
+/* GLOBALES */
+* {
+    font-size: 62.5%;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/* HEADER */
+.header {
+    background-color: grey;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid whitesmoke;
+    box-shadow: 1px 1px 10px whitesmoke;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-size: 4rem;
+}
+
+.header__nombre {
+    width: 35%;
+    align-self: center;
+}
+
+.header__perfil {
+    width: 65%;
+    padding: 0.5rem;
+    font-size: 3rem;
+}
+
+/* NAV */
+.nav {
+    background-color: rgb(97, 97, 97);
+    border-top: 0.1rem solid whitesmoke;
+    border-bottom: 0.1rem solid whitesmoke;
+    box-shadow: 1px 1px 10px whitesmoke;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a {
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    background-color: grey;
+    border-top: 0.1rem solid whitesmoke;
+    box-shadow: 1px 1px 10px whitesmoke;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__formulario p {
+    text-align: center;
+}
+
+.footer__formulario label {
+    font-size: 2rem; 
+}
+
+
+/* CONTAINER */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+    "container__imagen container__section"
+    "container__aside container__section"
+    ;
+}
+
+.container__imagen {
+    grid-area: container__imagen;
+    width: 60%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.container__imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.container__aside {
+    font-size: 2rem;
+    background-color: whitesmoke; 
+    padding: 1rem;
+    grid-area: container__aside;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+.container__aside li {
+    font-size: 1.5rem;
+}
+
+
+.container__section {
+    font-size: 4rem;
+    background-color: whitesmoke; 
+    padding: 1rem;
+    grid-area: container__section;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+
+p, li {
+    text-align: justify
+    
+}
+
+h4 {
+    text-decoration: underline
+}
+
+    @media only screen and (min-width: 522px) {
+    .header {
+        flex-direction: row;
+        width: 100%;
+    }    
+}
+
+    @media only screen and (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+    }    
+}
+
+@media only screen and (max-width: 374px) {
+    .container {
+        display: table-row;
+    
+    }
+
+    .header__nombre {
+        align-self: left;
+    }
+}
